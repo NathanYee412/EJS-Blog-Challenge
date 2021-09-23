@@ -4,9 +4,16 @@
     <hr>
     <form action="/compose" method="post">
         <p><strong>Title</strong></p>
-        <input class="titletext" type="text" name="blogTitle">
+        
+        <!-- <input class="titletext" type="text" name="blogTitle"> -->
+        <input type="text" class="form-control titletext" name="blogTitle">
+
+
         <p><strong>Content</strong></p>
-        <input class="textarea" type="text" name="blogContent">
+        
+        <!-- <input class="textbox" type="text" name="blogContent"> -->
+        <textarea class="form-control textbox" name="blogContent"></textarea>
+
         <button class="btn btn-primary publishButton" type="submit">Publish</button>
     </form>
 

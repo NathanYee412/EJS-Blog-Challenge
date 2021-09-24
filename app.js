@@ -68,9 +68,10 @@ app.get("/posts/:postName", (req, res) => {
     postTitle = _.kebabCase(post.title);
 
     if(postName === postTitle) {
-      console.log("Post exists");
-    } else {
-      console.log("Post not found");
+      
+      //const postURL = "posts/" + postName;
+      
+      res.render('post', { webPostTitle: postTitle, webPostContent: post.content });      
     }
   });
 

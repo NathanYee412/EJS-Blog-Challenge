@@ -15,7 +15,9 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
+// array containing blog post object with title and content
 const blogPosts = [];
+
 
 app.get("/", (req, res) =>{
   res.render('home', {viewHomeContent: homeStartingContent, viewBlogPost: blogPosts});
@@ -51,7 +53,27 @@ app.post("/compose", (req, res) => {
 
 });
 
+app.get("/posts/:postName", (req, res) => {
 
+  let postName = req.params.postName;
+  
+  let postExists = false;
+
+  // if post exists, set marker to true
+  blogPosts.forEach((post) => {
+    if(postName === post.title) {
+      postExists = true;
+    } 
+  });
+
+  if(postExists) {
+    console.log("Post found");
+  } else {
+    console.log("Post not found");
+  }
+
+
+});
 
 
 

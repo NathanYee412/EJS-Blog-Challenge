@@ -3,6 +3,11 @@
     <h1>Hello World!</h1>
     <%= viewHomeContent %>
 
-    <% console.log(viewBlogPost[0].title); %>
+    <% viewBlogPost.forEach((post) => {  %>
+        <h1><%= post.title  %></h1> 
+        <p><%= post.content %></p>
+    <% }); %>
 
+
+    
 <%- include('partials/footer') %>

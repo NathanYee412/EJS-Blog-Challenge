@@ -71,7 +71,7 @@ app.get("/posts/:postName", (req, res) => {
       
       //const postURL = "posts/" + postName;
       
-      res.render('post', { webPostTitle: postTitle, webPostContent: post.content });      
+      res.render('post', { webPostTitle: post.title, webPostContent: post.content });      
     }
   });
 

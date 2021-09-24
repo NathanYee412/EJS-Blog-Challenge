@@ -4,10 +4,10 @@
     <%= viewHomeContent %>
 
     <% viewBlogPost.forEach((post) => {  %>
-        <h1><%= post.title  %></h1> 
-        <p><%= post.content %></p>
+        <h1><%= post.title.slice(0,100) %></h1> 
+        <p><%= post.content.slice(0,100) + " ..." %><a> Read More</a></p>
     <% }); %>
 
 
-    
+
 <%- include('partials/footer') %>

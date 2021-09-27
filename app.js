@@ -21,6 +21,8 @@ const blogPosts = [];
 
 
 app.get("/", (req, res) =>{
+
+
   res.render('home', {viewHomeContent: homeStartingContent, viewBlogPost: blogPosts});
 
 });

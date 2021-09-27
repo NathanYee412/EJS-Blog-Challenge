@@ -2,10 +2,9 @@
     
     <h1>Hello World!</h1>
     <%= viewHomeContent %>
-
     <% viewBlogPost.forEach((post) => {  %>
         <h1><%= post.title.slice(0,100) %></h1> 
-        <p><%= post.content.slice(0,100) + " ..." %><a> Read More</a></p>
+        <p><%= post.content.slice(0,100) + " ..." %><a href="/posts/<%= post.title %>" + post.title</a>> Read More</a></p>
     <% }); %>
 
 
